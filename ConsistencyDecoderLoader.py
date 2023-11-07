@@ -18,6 +18,11 @@ class ConsistencyDecoderWrapper:
         return self.decoder(x)
 
 class ConsistencyDecoderLoader:
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {},
+        }
     RETURN_TYPES = ("VAE",)
     FUNCTION = "load_consistency_decoder"
 
