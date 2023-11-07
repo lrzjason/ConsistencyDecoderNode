@@ -18,16 +18,13 @@ class ConsistencyDecoderWrapper:
         return self.decoder(x)
 
 class ConsistencyDecoderLoader:
-    @classmethod
-    def INPUT_TYPES(s):
-        return {"required": { "device_name": ("STRING", {"default": "cuda:0"}), }}
     RETURN_TYPES = ("VAE",)
     FUNCTION = "load_consistency_decoder"
 
     CATEGORY = "ConsistencyDecoderNode"
 
-    def load_consistency_decoder(self, device_name):
-        consistencyDecoder = ConsistencyDecoder(device=device_name)
+    def load_consistency_decoder(self):
+        consistencyDecoder = ConsistencyDecoder(device="cuda:0")
         vae = ConsistencyDecoderWrapper(consistencyDecoder)
         return (vae,)
 
