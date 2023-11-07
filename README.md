@@ -31,3 +31,9 @@ C:\\Users\\[user]/.cache/clip
 # Example
 It only works with SD1.5 latent mapping
 ![alt text](https://github.com/lrzjason/ConsistencyDecoderNode/blob/main/assets/example.png?raw=true)
+
+Original Image:
+![alt text](https://github.com/lrzjason/ConsistencyDecoderNode/blob/main/assets/1.png?raw=true)
+
+Consistency Decoder:
+![alt text](https://github.com/lrzjason/ConsistencyDecoderNode/blob/main/assets/1_consistency.png?raw=true)
