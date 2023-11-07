@@ -4,7 +4,7 @@ import random
 import folder_paths
 import comfy.sd
 import comfy.utils
-from consistencydecoder import ConsistencyDecoder, save_image, load_image
+from consistencydecoder import ConsistencyDecoder
 import numpy as np
 import torch
 from PIL import Image 
@@ -21,15 +21,13 @@ class ConsistencyDecode:
 
     def decode(self, samples):
         consistencyDecoder = ConsistencyDecoder(device="cuda:0")
-        images = consistencyDecoder(samples["samples"].to("cuda:0")).cpu().numpy()
+        images = consistencyDecoder(samples["samples"].to("cuda:0"))
         # create result torch tensor
         result = torch.zeros(images.shape[0],images.shape[2],images.shape[3],images.shape[1]).cpu()
-        # print('value',images.shape[0],images.shape[2],images.shape[3],images.shape[1])
-        # print('image.shape',result.shape)
-        # print('result.shape',result.shape)
         # loop images
         for i in range(len(images)):
-            image = (images[i] + 1.0) * 127.5
+            image = images[i].cpu().numpy()
+            image = (image + 1.0) * 127.5
             image = image.clip(0, 255).astype(np.uint8)
             image = Image.fromarray(image.transpose(1, 2, 0))
             image = image.convert("RGB")
