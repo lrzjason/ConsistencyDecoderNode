@@ -2,6 +2,10 @@
 
 This project is a comfyui node adaption of Consistency Decoder (https://github.com/openai/consistencydecoder).
 
+- 20231107
+Support multiple images but it would exceed 24GB vram usage. 
+Please don't use with batch size more than 2.
+
 ## Installation
 
 ```bash
