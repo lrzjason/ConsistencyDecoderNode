@@ -8,6 +8,8 @@ Please don't use with batch size more than 2.
 
 ## Installation
 
+If you are using venv, please activate venv first.
+
 ```bash
 pip install git+https://github.com/openai/consistencydecoder.git
 ```
