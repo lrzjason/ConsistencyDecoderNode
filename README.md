@@ -4,7 +4,9 @@ This project is a comfyui node adaption of Consistency Decoder (https://github.c
 
 ## Installation
 
-- pip install git+https://github.com/openai/consistencydecoder.git
+```bash
+pip install git+https://github.com/openai/consistencydecoder.git
+```
 - goto ComfyUI\custom_nodes
 ```bash
 git clone https://github.com/lrzjason/ConsistencyDecoderNode
