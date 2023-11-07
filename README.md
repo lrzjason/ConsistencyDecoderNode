@@ -1,6 +1,6 @@
 # Consistency Decoder For Comfyui
 
-This project is an node adaption of Consistency Decoder(https://github.com/openai/consistencydecoder).
+This project is a comfyui node adaption of Consistency Decoder (https://github.com/openai/consistencydecoder).
 
 ## Installation
 
@@ -10,12 +10,14 @@ This project is an node adaption of Consistency Decoder(https://github.com/opena
 git clone https://github.com/lrzjason/ConsistencyDecoderNode
 ```
 
-Please download the following link and place the model to 
+Please download the model from following link 
+```bash
+https://openaipublic.azureedge.net/diff-vae/c9cebd3132dd9c42936d803e33424145a748843c8f716c0814838bdc8a2fe7cb/decoder.pt
+```
+place the model to 
 ```bash
 C:\\Users\\[user]/.cache/clip
 ```
-if neccessary
-https://openaipublic.azureedge.net/diff-vae/c9cebd3132dd9c42936d803e33424145a748843c8f716c0814838bdc8a2fe7cb/decoder.pt
 
 # Hardware Requirement
 - 24GB vram at peak
